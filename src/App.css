@@ -1,0 +1,135 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Fira Code', 'Fira Mono', monospace;
+  background-color: #0f1117;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left, .right {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 50%;
+  background: #1a1b26;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #2d2f3b;
+}
+
+.right {
+    width: 50%;
+    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Vibrant purple-blue gradient */
+    overflow-y: auto;
+    border-left: 1px solid #2d2f3b;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px; /* Slightly rounded corners for a modern feel */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow to make it pop */
+  }
+.code {
+  flex: 1;
+  background-color: #1e222a;
+  border-radius: 12px;
+  padding: 15px;
+  overflow: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.code:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 160, 0.3);
+}
+
+.review {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #000;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 249, 215, 0.2);
+}
+
+.review:active {
+  transform: scale(0.97);
+}
+
+.markdown {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1b26;
+}
+select {
+    background-color: #2e3b4e;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid #4a576d;
+    border-radius: 8px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #ff6f61; /* Changes border color on focus */
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5); /* Adds a glowing effect */
+  }
+  
+  option {
+    background-color: #2e3b4e;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+  }
+  
+  option:hover {
+    background-color: #ff6f61; /* Highlights options on hover */
+  }
+  
+  option:checked {
+    background-color: #ff6f61; /* Marks selected option with the same color */
+    color: white;
+  }
